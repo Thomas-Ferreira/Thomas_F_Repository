@@ -11,7 +11,7 @@ def getRepositories():
 	json_item = json.loads(res.text)
 	for item in json_item:
 		title = "Title : " + item["name"]
-		open("/home/thomas/Thomas_F_Repository/Projet/results.text","a").write(title)
+		open("/home/thomas/Thomas_F_Repository/Projet/results.text","a").write(title+"\n")
 		
 
 getRepositories()	
