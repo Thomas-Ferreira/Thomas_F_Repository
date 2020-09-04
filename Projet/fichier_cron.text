@@ -1,0 +1,5 @@
+25 11 * *  * truncate -s 0 results.text & python3 ex-1_Projet-1.py
+
+#commande cron pour executer le script ex-1_Projet-1.py
+
+#truncate -s 0 results.text efface le contenu de results.text pour l'utiliser avec le script python

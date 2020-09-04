@@ -4,7 +4,7 @@ import json
 		
 
 def getRepositories():
-	res = requests.get("https://api.github.com/search/repositories,sort=star&q=created:2020-01-01&perpage=100")
+	res = requests.get("https://api.github.com/search/repositories?sort=star&q=created:2020-01-01&perpage=100")
 	
 	json_item = json.loads(res.text)["items"]
 	#print (json_item)
@@ -13,8 +13,8 @@ def getRepositories():
 		des = item["description"]
 		if des is None :
 			des = "no description "
-		star = item ["stargazers_count"]
-		open("/home/thomas/Thomas_F_Repository/Projet/results_ex-2.text","a").write(title+"	"+des+"\n"+"	"+star+"\n")
+		star = str(item ["stargazers_count"])
+		open("/home/thomas/Thomas_F_Repository/Projet/results_ex-2.text","a").write(title+"	"+des+"\n"+" stars : " + star + "\n")
 		
 
 getRepositories()	
