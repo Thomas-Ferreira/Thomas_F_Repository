@@ -36,3 +36,6 @@ def renameAllBooks():
     for file in os.listdir():
         os.rename(file, dictionnary["titles"][i] + "-" + dictionnary["authors"][i] + ".txt")
         i += 1
+        
+getBooksTitleAndAuthor()
+renameAllBooks()
